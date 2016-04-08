@@ -10,8 +10,8 @@ package calculadora;
  * @author 1-DAM-T
  */
 public class Calculadora {
-  private int operacion1;
-  private int operacion2;
+  private int operacion1;//ingica la primera operacion
+  private int operacion2;//indica la segunda operacion
   private int resultado;
   private char operacion;
   private int base;
