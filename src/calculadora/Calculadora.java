@@ -13,14 +13,14 @@ public class Calculadora {
   private int operacion1;
   private int operacion2;
   private int resultado;
-  private char operacion;
+  private char operador;
   private int base;
 
   public Calculadora() {
       this.operacion1 = 0;
       this.operacion2 = 0;
       this.resultado = 0;
-      this.operacion = ' ';
+      this.operador = ' ';
   }
 
   public void setOperacion1(int n){
@@ -35,8 +35,8 @@ public class Calculadora {
       this.resultado = n;
   }
 
-  public void setOperacion(char o){
-      this.operacion = o;
+  public void setOperador(char o){
+      this.operador = o;
   }
 
   public int operacion1(){
@@ -51,8 +51,8 @@ public class Calculadora {
       return this.resultado;
   }
 
-  public char getOperacion(){
-      return this.operacion;
+  public char getOperador(){
+      return this.operador;
   }
 
   public void suma(){
