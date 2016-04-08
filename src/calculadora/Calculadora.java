@@ -11,14 +11,14 @@ package calculadora;
  */
 public class Calculadora {
   private int operacion1;
-  private int operacion2;
+  private int oper2;
   private int resultado;
   private char operador;
   private int base;
 
   public Calculadora() {
       this.operacion1 = 0;
-      this.operacion2 = 0;
+      this.oper2 = 0;
       this.resultado = 0;
       this.operador = ' ';
   }
@@ -27,7 +27,7 @@ public class Calculadora {
       this.operacion1 = n;
   }
 
-  public void setOperacion2(int n){
+  public void setOper2(int n){
       this.operacion2(n);
   }
 
@@ -43,7 +43,7 @@ public class Calculadora {
       return this.operacion1;
   }
 
-  public int getOperacion2(){
+  public int getOper2(){
       return this.operacion2();
   }
 
@@ -74,7 +74,7 @@ public class Calculadora {
   }
   public void establecerNumeroB(String b){
       int n = Integer.parseInt(b, getBase());
-      this.setOperacion2(n);
+      this.setOper2(n);
   }
   public String retornarNumeroA(){
       String cad="";
@@ -133,10 +133,10 @@ public class Calculadora {
   }
 
     /**
-     * @return the operacion2
+     * @return the oper2
      */
     public int operacion2() {
-        return operacion2;
+        return oper2;
     }
 
    
