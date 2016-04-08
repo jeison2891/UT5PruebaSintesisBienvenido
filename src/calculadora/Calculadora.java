@@ -27,8 +27,8 @@ public class Calculadora {
       this.operacion1 = n;
   }
 
-  public void setNumeroB(int n){
-      this.setOperacion2(n);
+  public void setOperacion2(int n){
+      this.operacion2(n);
   }
 
   public void setResultado(int n){
@@ -39,12 +39,12 @@ public class Calculadora {
       this.operacion = o;
   }
 
-  public int getOperacion1(){
+  public int operacion1(){
       return this.operacion1;
   }
 
-  public int getNumeroB(){
-      return this.getOperacion2();
+  public int getOperacion2(){
+      return this.operacion2();
   }
 
   public int getResultado(){
@@ -56,40 +56,40 @@ public class Calculadora {
   }
 
   public void suma(){
-      this.setResultado(this.getOperacion1() + this.getOperacion2());
+      this.setResultado(this.operacion1() + this.operacion2());
   }
   public void resta(){
-      this.setResultado(this.getOperacion1() - this.getOperacion2());
+      this.setResultado(this.operacion1() - this.operacion2());
   }
   public void multiplicacion(){
-      this.setResultado(this.getOperacion1() * this.getOperacion2());
+      this.setResultado(this.operacion1() * this.operacion2());
   }
   public void division(){
-      this.setResultado(this.getOperacion1() / this.getOperacion2());
+      this.setResultado(this.operacion1() / this.operacion2());
   }
 
-  public void establecerNumeroA(String a){
+  public void establecerOperacion1(String a){
       int n = Integer.parseInt(a, getBase());
       this.setOperacion1(n);
   }
   public void establecerNumeroB(String b){
       int n = Integer.parseInt(b, getBase());
-      this.setNumeroB(n);
+      this.setOperacion2(n);
   }
   public String retornarNumeroA(){
       String cad="";
       switch(getBase()){
       case 2:
-          cad = Integer.toBinaryString(getOperacion1());
+          cad = Integer.toBinaryString(operacion1());
           break;
       case 8:
-          cad = Integer.toOctalString(getOperacion1());
+          cad = Integer.toOctalString(operacion1());
           break;
       case 10:
-          cad = String.valueOf(getOperacion1());
+          cad = String.valueOf(operacion1());
           break;
       case 16:
-          cad = Integer.toHexString(getOperacion1());
+          cad = Integer.toHexString(operacion1());
           break;
       }
       return cad;
@@ -99,16 +99,16 @@ public class Calculadora {
       String cad="";
       switch(getBase()){
       case 2:
-          cad = Integer.toBinaryString(getOperacion2());
+          cad = Integer.toBinaryString(operacion2());
           break;
       case 8:
-          cad = Integer.toOctalString(getOperacion2());
+          cad = Integer.toOctalString(operacion2());
           break;
       case 10:
-          cad = String.valueOf(getOperacion2());
+          cad = String.valueOf(operacion2());
           break;
       case 16:
-          cad = Integer.toHexString(getOperacion2());
+          cad = Integer.toHexString(operacion2());
           break;
       }
       return cad;
@@ -135,20 +135,12 @@ public class Calculadora {
     /**
      * @return the operacion2
      */
-    public int getOperacion2() {
+    public int operacion2() {
         return operacion2;
     }
 
-    /**
-     * @param operacion2 the operacion2 to set
-     */
-    public void setOperacion2(int operacion2) {
-        this.operacion2 = operacion2;
-    }
-
-    /**
-     * @return the base
-     */
+   
+     
     public int getBase() {
         return base;
     }
@@ -158,6 +150,10 @@ public class Calculadora {
      */
     public void setBase(int base) {
         this.base = base;
+    }
+
+    private void operacion2(int n) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }
